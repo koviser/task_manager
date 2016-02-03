@@ -1,0 +1,6 @@
+.project{class: "project_#{project.try(:id)}"}
+  .edit.icono-sliders{data: {url: project_path(project)}}
+  .destroy.icono-cross{data: {url: project_path(project)}}
+  %a.got_to_task{data:{url: project_path(project)},href: "#"}
+    .image{style: img_pr(project) ?  "background-image: url('#{img_pr(project)}')" : ""}
+  .proect_name= project.try :name

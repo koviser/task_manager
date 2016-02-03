@@ -1,0 +1,11 @@
+user1:
+  email: "user1@example.com"
+  password_digest: "password"
+
+user2:
+  email: "user2@example.com"
+  password_digest: "password"
+
+user3:
+  email: "user3@example.com"
+  password_digest: "password"

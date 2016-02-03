@@ -1,0 +1,11 @@
+.tasks
+  %a.back.icono-leftArrow{href: "#"}
+  %a.create{href: "#"} Create Task
+  %h1= current_project.try(:name)
+  .blocks
+    - tasks.each do |k, array|
+      .task
+        %h1= k
+        %ol.example{class: k}
+          - array.each do |task|
+            = partial "task/one", locals: {task: task}, layout: false

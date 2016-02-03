@@ -1,0 +1,7 @@
+%li.castom_info{class: "task_#{task.id}", data: {id: task.try(:id), url: task_path(task), priority: task.try(:priority)}}
+  %span
+    %input.task_finish{type: "checkbox", checked: task.try(:finish)}
+  %span.edit_task= task.try :name
+  %span.edit_task= parse_time(task.try :dedlayn)
+  %span.destroy.icono-cross
+

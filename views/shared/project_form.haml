@@ -1,0 +1,11 @@
+%form{action: "#",  method: :post, class: project ? :edit : :create, data: {url: project_path(project)}}
+  .close.icono-cross
+  %p    
+    %input.precense.input-smal{type: "text",  name: "project[name]", value: project.try(:name), require: true, placeholder: "Name"}
+  %p
+    Picture:
+    - if project.try(:picture).try(:present?)
+      .image{style: img_pr(project) ?  "background-image: url('#{img_pr(project)}')" : ""}
+    %input.btn{type: "file",  value: "Select picture",name: "project[picture]", accept: "image/jpeg,image/png,image/gif"}
+  %p
+    %input.btn{type: "submit", value: project ? "Edit" : "Create"}

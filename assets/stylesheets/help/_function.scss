@@ -1,0 +1,15 @@
+@mixin hover($time: 0.3s, $rotate: false){
+  opacity: 1;
+  @if $rotate{
+    @include transition(all $time);
+  }@else{
+    @include transition(opacity $time);
+  }
+  cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+    @if $rotate{
+      @include rotate(135deg);
+    }
+  }
+}

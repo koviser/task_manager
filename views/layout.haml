@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Task Manager
+    %meta{name: 'viewport', content: "width=device-width, initial-scale=1"}
+    = stylesheet_tag  'application', media: 'all'
+  %body
+    = partial "shared/header", layout: false   
+    .main_block 
+      .progects 
+        = yield if current_user   
+      .authorize{class: current_user ? "hide": ""}  
+        = partial "login/login", layout: false
+        = partial "login/register", layout: false
+      .popups
+        .popup.changes.hide= partial "login/changes", layout: false
+        .popup.project_edit.hide
+        .popup.project_form.hide= partial "shared/project_form", locals: {project: false}, layout: false
+        .popup.task_edit.hide
+        .popup.task_form.hide= partial "task/form", locals: {task: false}, layout: false
+    = javascript_tag 'application'

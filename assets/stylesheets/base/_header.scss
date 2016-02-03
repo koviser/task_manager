@@ -1,0 +1,17 @@
+body{
+  background: $main;
+}
+header{
+  min-height: 50px;
+  padding: 10px 20%;
+  background: $header;
+  border-top: 30px solid $main;
+  div{
+    display: inline-block;
+  }
+  a{
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 50px;
+  }
+}

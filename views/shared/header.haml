@@ -1,0 +1,4 @@
+%header{class: current_user ? "" : :hide}
+  %a.log_out{href: "#"} Log Out
+  %a.change{href: "#"} Change Password
+  .user=current_user.try(:email)

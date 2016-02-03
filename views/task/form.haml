@@ -1,0 +1,18 @@
+%form{action: "#",  method: :post, class: task ? :edit : :create, data: {url: task_path(task)}}
+  .close.icono-cross
+  %p
+    %textarea.precense{type: "text", placeholder: "Task", name: "task[name]", require: true}= task.try(:name)
+  %p
+    Dedlayn:
+    %input{type: "date",  name: "task[dedlayn]", value: parse_time(task.try(:dedlayn))}
+  %p
+    Priority:
+    %select{name: "task[priority]"}
+      - Task.priorities.keys.each_with_index do |k, index|
+        %option{value: k, selected: task ? task.priority == k : index == 1}= k
+  - if task
+    %p
+      Finish:
+      %input{type: "checkbox",  name: "task[finish]", checked: task.finish}
+  %p
+    %input{type: "submit", value: task ? "Edit" : "Create"}

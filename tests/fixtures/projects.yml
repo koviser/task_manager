@@ -1,0 +1,27 @@
+project1:
+  user: user1
+  name: "project1"
+
+project2:
+  user: user1
+  name: "project2"
+
+project3:
+  user: user1
+  name: "project3"
+
+project4:
+  user: user2
+  name: "project4"
+
+project5:
+  user: user2
+  name: "project5"
+
+project6:
+  user: user3
+  name: "project6"
+
+project7:
+  user: user3
+  name: "project7"

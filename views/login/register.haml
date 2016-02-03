@@ -1,0 +1,11 @@
+.register{class: @register ? "" : :hide}
+  %form{action: "#",  method: :post}   
+    %p
+      %input.precense{type: "text",  name: "user[email]", placeholder: "Email", require: true}
+    %p 
+      %input.precense{type: "password", placeholder: "Password", name: "user[password]", require: true}
+    %p 
+      %input.precense{type: "password", placeholder: "Password confirmation",name: "user[password_confirmation]", require: true}
+    %p
+      %input{type: "submit", value: "Register"}
+    %a{href: "#", class: :change_form} Login

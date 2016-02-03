@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+.hide{
+  overflow: hidden;
+  height: 0;
+  display: inline-block;
+}
+
+input.error{
+  border: 2px solid red;
+}
+
+.main_block{
+  padding: 30px 20%;
+  background: $main;
+  min-height: calc(100vh - 70px);
+}
+
+.edit {
+  @include hover();
+  margin-bottom: 5px;
+}
+
+.close,.destroy{
+  @include hover(0.3s, true);
+}
+[class*=icono-]{
+  color: white;
+}

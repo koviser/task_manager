@@ -1,0 +1,8 @@
+%form{action: "#",  method: :post} 
+  .close.icono-cross   
+  %p
+    %input.precense{type: "password",  name: "user[password]", placeholder: "Password", require: true}
+  %p     
+    %input.precense{type: "password",  name: "user[password_confirmation]", placeholder: "Password confirmation", require: true}
+  %p
+    %input{type: "submit", value: "change"}
